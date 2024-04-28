@@ -8,7 +8,7 @@ require("../utils/databaseManager.php");
 $pdo = connectDB();
 
 //entrer en POST?
-if($_SERVER["REQUEST_METHOD"] === "POST") {
+if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['use']) ) {
     //suppression si submit "valider"
     if($_POST['use'] == "valider") {
         deleteArticle($pdo, $_POST['id']);

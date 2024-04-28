@@ -5,7 +5,7 @@ include("../block/headerAdmin.php");
 require("../utils/databaseManager.php");
 $pdo = connectDB();
 
-if($_SERVER["REQUEST_METHOD"] === "POST") {
+if($_SERVER["REQUEST_METHOD"] === "POST" && (isset($_POST['contenu']) && isset($_POST['titre'])) ) {
 
     $query = $pdo->prepare('UPDATE annonce SET contenu = :contenu, titre = :titre, datePublication = NOW() WHERE id = :id');
     $query->execute([
@@ -30,9 +30,9 @@ $title = "Mise a jour de l'article : " . $article["titre"];
 
     <form method="POST">
         <label for="titre">Titre</label>
-        <input type="text" name="titre" id="titre" value="<?php echo $article['titre'] ?>">
+        <input type="text" name="titre" id="titre" value="<?php echo $article['titre'] ?>" require>
         <label for="contenu">Contenu</label>
-        <textarea name="contenu" id="contenu" cols="30" rows="10"><?php echo $article['contenu'] ?></textarea>
+        <textarea name="contenu" id="contenu" cols="30" rows="10" require><?php echo $article['contenu'] ?></textarea>
         <input type="hidden" name="id" value="<?php echo $article['id'] ?>">
         <input type="submit" value="Modifier">
     </form>
