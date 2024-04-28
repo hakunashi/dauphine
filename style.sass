@@ -1,0 +1,117 @@
+body
+    a
+        text-decoration: none 
+    //navigation
+    nav
+        padding: 20px 0
+        background-color: #696969
+        ul
+            list-style: none
+            padding: 0
+            margin: 0
+            display: flex
+            justify-content: space-around
+            align-items: center
+            li 
+                a
+                    background-color: #fff
+                    border-radius: 5px
+                    display: block
+                    padding: 10px
+                    color: #696969
+                    transition: all 0.4s ease-in-out
+                    &:hover
+                        transform: scale(1.1)
+    //main
+    main
+        padding: 20px 0
+        h1
+            padding: 20px 0
+        section
+            width: 100vw
+            text-align: center
+            padding: 20px
+            article
+                color: #fff
+                background-color: #454545
+                margin: 30px 0
+                padding: 10px 20px 30px 10px
+                border-radius: 10px
+                box-shadow: 10px 10px 20px #5b5b5b
+                h2
+                    padding: 10px 0
+                div.content_container
+                    display: flex
+                    div.img_container
+                        width: 50%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        padding: 30px
+                        img
+                            width: 75%
+                    div.text_container
+                        background-color: #5b5b5b
+                        width: 50%
+                        border-radius: 5px
+                        border: 2px solid #ffffff
+                        overflow: scroll
+                        padding: 20px
+    main#login_page
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+    main#admin
+        section
+            article
+                div.admin-container
+                    padding: 10px 0
+                    margin: 20px 0
+                    display: flex
+                    justify-content: space-around
+                    a
+                        color: #484848
+                        padding: 15px
+                        background-color: #fff
+                        border-radius: 5px
+                        transition: all 0.4s ease-in-out
+                        &:hover
+                            transform: scale(1.1)
+    main.admin-page-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            label
+                padding: 10px 0
+            input
+                margin: 10px 0
+                &#valider
+                    border: none
+                    padding: 20px
+                    color: #fff
+                    background-color: #662222
+                    border-radius: 5px
+                    transition: all 0.4s ease-in-out
+                    &:hover
+                        transform: scale(1.1)
+                &#annuler
+                    border: none
+                    padding: 20px
+                    color: #fff
+                    background-color: #23479a
+                    border-radius: 5px
+                    transition: all 0.4s ease-in-out
+                    &:hover
+                        transform: scale(1.1)
